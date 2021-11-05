@@ -1,6 +1,6 @@
 {
   "name": "org.pcsoft.world-ex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Unity World Extension",
   "description": "Extension for Unity to use worlds instead of single scenes",
   "unity": "2021.1",
@@ -12,7 +12,7 @@
     "blending"
   ],
   "dependencies": {
-    "org.pcsoft.binding": "1.0.1",
+    "org.pcsoft.blending": "1.0.1",
     "org.pcsoft.scene-ex": "1.0.0",
     "org.pcsoft.editor-ex": "1.0.1"
   },
