@@ -1,0 +1,24 @@
+{
+  "name": "org.pcsoft.world-ex",
+  "version": "1.0.0",
+  "displayName": "Unity World Extension",
+  "description": "Extension for Unity to use worlds instead of single scenes",
+  "unity": "2021.1",
+  "keywords": [
+    "world",
+    "scene",
+    "tooling",
+    "management",
+    "blending"
+  ],
+  "dependencies": {
+    "org.pcsoft.binding": "1.0.1",
+    "org.pcsoft.scene-ex": "1.0.0",
+    "org.pcsoft.editor-ex": "1.0.1"
+  },
+  "author": {
+    "name": "Pfeiffer C Soft",
+    "email": "kl3in3rhack3r@gmail.com",
+    "url": "https://github.com/KleinerHacker/unity-world-ex"
+  }
+}

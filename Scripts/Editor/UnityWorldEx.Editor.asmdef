@@ -1,0 +1,20 @@
+{
+    "name": "UnityWorldEx.Editor",
+    "rootNamespace": "UnityWorldEx.Editor",
+    "references": [
+        "GUID:6b28ab00d1b1c7c49a2849c1a25f82f9",
+        "GUID:5d0595cabca3f65418ec01a472735d07",
+        "GUID:14234481404227a4499c9577e84a2ef9"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

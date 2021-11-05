@@ -1,0 +1,18 @@
+{
+    "name": "UnityWorldEx.Runtime",
+    "rootNamespace": "UnityWorldEx.Runtime",
+    "references": [
+        "GUID:86c5ae22b787083498226e9faa99731d",
+        "GUID:3b8a68493e633a943988c0ce2da488de",
+        "GUID:463994087550c344abd34fb8d2fbd843"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
