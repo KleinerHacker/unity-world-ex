@@ -1,9 +1,9 @@
 using System.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
-using UnityWorldEx.Runtime.world_ex.Scripts.Runtime.Assets;
+using UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Assets;
 
-namespace UnityWorldEx.Editor.world_ex.Scripts.Editor
+namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor
 {
     public static class EditorActionUtils
     {

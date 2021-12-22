@@ -2,7 +2,7 @@ using System;
 using UnityEditorEx.Runtime.editor_ex.Scripts.Runtime.Extra;
 using UnityEngine;
 
-namespace UnityWorldEx.Runtime.world_ex.Scripts.Runtime.Assets
+namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Assets
 {
     [CreateAssetMenu(menuName = UnityWorldConstants.Menus.Assets.RootMenu + "/World")]
     public sealed class WorldAsset : ScriptableObject

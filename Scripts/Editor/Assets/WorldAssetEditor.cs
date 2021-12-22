@@ -2,9 +2,9 @@ using UnityEditor;
 using UnityEditorEx.Editor.editor_ex.Scripts.Editor;
 using UnityEditorInternal;
 using UnityEngine;
-using UnityWorldEx.Runtime.world_ex.Scripts.Runtime.Assets;
+using UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Assets;
 
-namespace UnityWorldEx.Editor.world_ex.Scripts.Editor.Assets
+namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Assets
 {
     [CustomEditor(typeof(WorldAsset))]
     public sealed class WorldAssetEditor : ExtendedEditor

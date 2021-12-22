@@ -1,8 +1,8 @@
 using UnityEditor;
 using UnityEditor.Callbacks;
-using UnityWorldEx.Runtime.world_ex.Scripts.Runtime.Assets;
+using UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Assets;
 
-namespace UnityWorldEx.Editor.world_ex.Scripts.Editor
+namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor
 {
     public static class EditorEvent
     {
