@@ -43,8 +43,12 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Components
                 });
 
             var goSceneSystem = new GameObject("World System");
-            goSceneSystem.AddComponent<WorldSystem>();
+            var worldSystem = goSceneSystem.AddComponent<WorldSystem>();
             DontDestroyOnLoad(goSceneSystem);
+
+            var worldItem = WorldSystemSettings.Singleton.Items
+                .FirstOrDefault(x => x.World.Scenes.Any(y => SceneManager.GetActiveScene().path == y.Scene));
+            worldSystem.RaiseSwitchEvent(RuntimeOnSwitchSceneType.LoadScenes, worldItem?.Identifier, new[] { SceneManager.GetActiveScene().path });
         }
 
         #endregion
@@ -80,7 +84,7 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Components
             if (type == RuntimeOnSwitchSceneType.UnloadScenes)
             {
                 var scenesNeverUnload = WorldSystemSettings.Singleton.Items
-                    .Where(x => x.NeverUnloadWorld)
+                    .Where(x => x.NeverUnload)
                     .SelectMany(x => x.Scenes)
                     .ToArray();
                 
@@ -91,5 +95,23 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Components
         }
 
         protected override WorldItem FindSceneItem(string identifier) => WorldSystemSettings.Singleton.Items.FirstOrDefault(x => x.Identifier == identifier);
+        
+        protected override string GetAllowedParameterDataType(string identifier)
+        {
+            var sceneItem = WorldSystemSettings.Singleton.Items.FirstOrDefault(x => x.Identifier == identifier);
+            if (sceneItem == null)
+                throw new ArgumentException("Identifier unknown: " + identifier);
+
+            return sceneItem.ParameterDataType;
+        }
+
+        protected override bool IsAllowNullParameterData(string identifier)
+        {
+            var sceneItem = WorldSystemSettings.Singleton.Items.FirstOrDefault(x => x.Identifier == identifier);
+            if (sceneItem == null)
+                throw new ArgumentException("Identifier unknown: " + identifier);
+
+            return sceneItem.ParameterDataAllowNull;
+        }
     }
 }

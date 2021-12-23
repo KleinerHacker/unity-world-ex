@@ -55,16 +55,11 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Assets
         [SerializeField]
         private WorldAsset world;
 
-        [SerializeField]
-        private bool neverUnloadWorld;
-
         #endregion
 
         #region Properties
 
         public WorldAsset World => world;
-
-        public bool NeverUnloadWorld => neverUnloadWorld;
 
         public override string[] Scenes => world.Scenes.Select(x => x.Scene).ToArray();
 
