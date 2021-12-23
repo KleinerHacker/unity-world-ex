@@ -20,7 +20,8 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Components
                 return;
             
             Debug.Log("Loading world system");
-            LoadSceneSystemBasics(WorldSystemSettings.Singleton.BlendingSystem, WorldSystemSettings.Singleton.CreateEventSystem,
+            LoadSceneSystemBasics(WorldSystemSettings.Singleton.BlendingSystem, WorldSystemSettings.Singleton.AdditionalGameObjects, 
+                WorldSystemSettings.Singleton.CreateEventSystem,
                 eventSystem =>
                 {
                     eventSystem.sendNavigationEvents = WorldSystemSettings.Singleton.ESUseNavigation;
