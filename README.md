@@ -24,6 +24,8 @@ Scopes:
 Setup your world system in project settings:
 ![editor](https://github.com/KleinerHacker/unity-world-ex/blob/0184743b3e75b9c2208f9d14544030aa97f62769/Docs/editor.png)
 
+To load worlds use always `WorldSystem` class.
+
 This project adds support for worlds. A double click on a world asset opens all contained scenes.
 
 :bangbang: Do not combine this with Unity Scene Extensions
