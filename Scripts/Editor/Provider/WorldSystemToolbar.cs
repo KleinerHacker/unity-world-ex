@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEngine;
+using UnitySceneBase.Editor.scene_system.scene_base.Scripts.Editor.Utils;
 using UnityToolbarExtender;
 using UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Assets;
 
@@ -32,6 +33,7 @@ namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Provider
             GUILayout.Space(5f);
 
             UseSystemProperty.boolValue = GUILayout.Toggle(UseSystemProperty.boolValue, "Use World System", ToolbarStyles.toggleStyle);
+            EditorGUILayoutEx.SceneVerbose(new GUIContent("World Logging"), ToolbarStyles.toggleStyle);
             
             SerializedObject.ApplyModifiedProperties();
         }

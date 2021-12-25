@@ -61,6 +61,9 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Components
 
         #endregion
 
+        public override void Load(string identifier, bool doNotUnload, Action onFinished, ParameterData parameterData = null, bool overwrite = true) => 
+            Load(identifier, doNotUnload, onFinished, parameterData, overwrite, WorldSystemSettings.Singleton.ParameterInitialData);
+
         protected override void RaiseBlendEvent(RuntimeOnBlendSceneType type, string identifier, Action asyncAction)
         {
             base.RaiseBlendEvent(type, identifier, asyncAction);
