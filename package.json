@@ -1,6 +1,6 @@
 {
   "name": "org.pcsoft.world-ex",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "displayName": "Unity World Extension",
   "description": "Extension for Unity to use worlds instead of single scenes",
   "unity": "2021.1",
@@ -17,7 +17,7 @@
     "org.pcsoft.extension": "1.2.0",
     "org.pcsoft.common-ex": "1.1.0",
     "org.pcsoft.asset-loader": "1.1.0",
-    "org.pcsoft.scene-base": "2.0.5",
+    "org.pcsoft.scene-base": "2.1.0",
     "com.marijnzwemmer.unity-toolbar-extender": "1.4.1"
   },
   "author": {
