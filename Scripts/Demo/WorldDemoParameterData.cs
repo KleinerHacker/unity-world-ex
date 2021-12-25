@@ -1,8 +1,11 @@
+#if DEMO
 using UnityEngine;
 using UnitySceneBase.Runtime.scene_system.scene_base.Scripts.Runtime.Types;
+#endif
 
 namespace UnityWorldEx.Demo.scene_system.world_ex.Scripts.Demo
 {
+#if DEMO
     [ParameterInitialDataType(typeof(WorldDemoInitialData))]
     public sealed class WorldDemoParameterData : ParameterData
     {
@@ -14,4 +17,5 @@ namespace UnityWorldEx.Demo.scene_system.world_ex.Scripts.Demo
             Text = data.Text;
         }
     }
+#endif
 }
