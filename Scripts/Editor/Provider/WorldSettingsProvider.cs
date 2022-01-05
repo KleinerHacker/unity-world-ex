@@ -27,7 +27,7 @@ namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Provider
         #endregion
 
         public WorldSettingsProvider() :
-            base("Project/World System", new[] { "Scene", "System", "Tooling", "Loading", "World" })
+            base("Project/Player/World System", new[] { "Scene", "System", "Tooling", "Loading", "World" })
         {
         }
 
