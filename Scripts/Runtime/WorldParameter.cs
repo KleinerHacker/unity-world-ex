@@ -6,14 +6,8 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime
 {
     public static class WorldParameter
     {
-        public static bool HasData<T>() where T : ParameterData
-        {
-            return SceneParameterSystem.HasData<T>();
-        }
+        public static bool HasData<T>() where T : ParameterData => SceneParameterController.HasData<T>();
 
-        public static T GetData<T>() where T : ParameterData
-        {
-            return SceneParameterSystem.GetData<T>(WorldSystemSettings.Singleton.ParameterInitialData);
-        }
+        public static T GetData<T>() where T : ParameterData => SceneParameterController.GetData<T>(WorldSystemSettings.Singleton.ParameterInitialData);
     }
 }
