@@ -48,7 +48,7 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Components
 
             var worldItem = WorldSystemSettings.Singleton.Items
                 .FirstOrDefault(x => x.World.Scenes.Any(y => SceneManager.GetActiveScene().path == y.Scene));
-            worldSystem.RaiseSwitchEvent(RuntimeOnSwitchSceneType.LoadScenes, worldItem?.Identifier, new[] { SceneManager.GetActiveScene().path });
+            worldSystem.RaiseSceneEvent(RuntimeOnSwitchSceneType.LoadScenes, worldItem?.Identifier, new[] { SceneManager.GetActiveScene().path });
         }
 
         #endregion
@@ -81,9 +81,9 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Components
             }
         }
 
-        protected override string[] RaiseSwitchEvent(RuntimeOnSwitchSceneType type, string identifier, string[] scenes)
+        protected override string[] RaiseSceneEvent(RuntimeOnSwitchSceneType type, string identifier, string[] scenes)
         {
-            var result = base.RaiseSwitchEvent(type, identifier, scenes);
+            var result = base.RaiseSceneEvent(type, identifier, scenes);
             if (type == RuntimeOnSwitchSceneType.UnloadScenes)
             {
                 var scenesNeverUnload = WorldSystemSettings.Singleton.Items

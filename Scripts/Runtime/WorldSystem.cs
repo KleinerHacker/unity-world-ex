@@ -17,5 +17,11 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime
 
         public static void Load(string identifier, bool doNotUnload, Action onFinished, ParameterData parameterData = null, bool overwrite = true) => 
             WorldController.Singleton.Load(identifier, doNotUnload, onFinished, parameterData, overwrite);
+        
+        public static void ExitApplication(bool showBlend = true, Action preExit = null) =>
+            WorldController.Singleton.ExitApplication(showBlend, preExit);
+        
+        public static void ExitApplication(bool showBlend = true, Action<Action> preExit = null) =>
+            WorldController.Singleton.ExitApplication(showBlend, preExit);
     }
 }
