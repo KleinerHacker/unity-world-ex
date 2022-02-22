@@ -1,10 +1,8 @@
 {
     "name": "UnityWorldEx.Demo",
     "rootNamespace": "UnityWorldEx.Demo",
-    "references": [
-        "GUID:6b28ab00d1b1c7c49a2849c1a25f82f9",
-        "GUID:e13cddd4b5df70e48add7fb8c6d723a8"
-    ],
+    "references": ["GUID:6b28ab00d1b1c7c49a2849c1a25f82f9",
+"GUID:e13cddd4b5df70e48add7fb8c6d723a8"],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
