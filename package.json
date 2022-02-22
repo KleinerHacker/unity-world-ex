@@ -18,7 +18,8 @@
     "org.pcsoft.common-ex": "1.1.4",
     "org.pcsoft.asset-loader": "1.1.0",
     "org.pcsoft.scene-base": "2.2.3",
-    "com.marijnzwemmer.unity-toolbar-extender": "1.4.1"
+    "com.marijnzwemmer.unity-toolbar-extender": "1.4.1",
+    "com.unity.inputsystem": "1.2.0"
   },
   "author": {
     "name": "Pfeiffer C Soft",
