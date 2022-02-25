@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityExtension.Runtime.extension.Scripts.Runtime.Components.Singleton.Attributes;
 using UnitySceneBase.Runtime.scene_system.scene_base.Scripts.Runtime.Assets;
 using UnitySceneBase.Runtime.scene_system.scene_base.Scripts.Runtime.Components;
 using UnitySceneBase.Runtime.scene_system.scene_base.Scripts.Runtime.Types;
@@ -13,12 +14,12 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Components
     {
         #region Static Area
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-        public static void LoadSceneSystem()
+        [SingletonCondition]
+        public static bool IsSingletonAlive() => WorldSystemSettings.Singleton.UseSystem;
+
+        [SingletonInitializer]
+        public static void Initialize(WorldController instance)
         {
-            if (!WorldSystemSettings.Singleton.UseSystem)
-                return;
-            
             Debug.Log("Loading world system");
             LoadSceneSystemBasics(WorldSystemSettings.Singleton.BlendingSystem, WorldSystemSettings.Singleton.AdditionalGameObjects, 
                 WorldSystemSettings.Singleton.CreateEventSystem,
@@ -41,14 +42,10 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Components
 
                     inputModule.xrTrackingOrigin = WorldSystemSettings.Singleton.ESXROrigin;
                 });
-
-            var goSceneSystem = new GameObject("World System");
-            var worldSystem = goSceneSystem.AddComponent<WorldController>();
-            DontDestroyOnLoad(goSceneSystem);
-
+            
             var worldItem = WorldSystemSettings.Singleton.Items
                 .FirstOrDefault(x => x.World.Scenes.Any(y => SceneManager.GetActiveScene().path == y.Scene));
-            worldSystem.RaiseSceneEvent(RuntimeOnSwitchSceneType.LoadScenes, worldItem?.Identifier, new[] { SceneManager.GetActiveScene().path });
+            instance.RaiseSceneEvent(RuntimeOnSwitchSceneType.LoadScenes, worldItem?.Identifier, new[] { SceneManager.GetActiveScene().path });
         }
 
         #endregion
