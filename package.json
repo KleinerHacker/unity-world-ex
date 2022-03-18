@@ -1,6 +1,6 @@
 {
   "name": "org.pcsoft.world-ex",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "displayName": "Unity World Extension",
   "description": "Extension for Unity to use worlds instead of single scenes",
   "unity": "2021.1",
@@ -12,12 +12,12 @@
     "blending"
   ],
   "dependencies": {
-    "org.pcsoft.blending": "2.0.1",
+    "org.pcsoft.blending": "2.1.0",
     "org.pcsoft.editor-ex": "1.1.8",
-    "org.pcsoft.extension": "1.7.1",
-    "org.pcsoft.common-ex": "1.1.4",
+    "org.pcsoft.extension": "1.7.2",
+    "org.pcsoft.common-ex": "1.1.5",
     "org.pcsoft.asset-loader": "1.1.0",
-    "org.pcsoft.scene-base": "2.2.4",
+    "org.pcsoft.scene-base": "2.2.5",
     "com.marijnzwemmer.unity-toolbar-extender": "1.4.1",
     "com.unity.inputsystem": "1.2.0"
   },
