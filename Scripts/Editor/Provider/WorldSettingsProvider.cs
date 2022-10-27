@@ -1,6 +1,9 @@
 using System.Linq;
 using UnityEditor;
+using UnityEditorEx.Editor.editor_ex.Scripts.Editor.Utils;
 using UnityEditorInternal;
+using UnityEngine;
+using UnitySceneBase.Editor.scene_system.scene_base.Scripts.Editor;
 using UnitySceneBase.Editor.scene_system.scene_base.Scripts.Editor.Provider;
 using UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Assets;
 
@@ -38,6 +41,21 @@ namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Provider
 #endif
 
             base.OnGUI(searchContext);
+
+            EditorGUILayout.Space();
+            var onlyRuntimeScenes = PlayerSettingsEx.IsScriptingSymbolDefined(UnityWorldEditorConstants.Building.Symbol.OnlyRuntimeScenes);
+            var newOnlyRuntimeScenes = GUILayout.Toggle(onlyRuntimeScenes, "Load only runtime scenes in editor player");
+            if (onlyRuntimeScenes != newOnlyRuntimeScenes)
+            {
+                if (newOnlyRuntimeScenes)
+                {
+                    PlayerSettingsEx.AddScriptingSymbol(UnityWorldEditorConstants.Building.Symbol.OnlyRuntimeScenes);
+                }
+                else
+                {
+                    PlayerSettingsEx.RemoveScriptingSymbol(UnityWorldEditorConstants.Building.Symbol.OnlyRuntimeScenes);
+                }
+            }
         }
 
         protected override ReorderableList CreateItemList(SerializedObject settings, SerializedProperty itemsProperty) => new WorldItemList(settings, itemsProperty);
