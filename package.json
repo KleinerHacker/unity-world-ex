@@ -14,7 +14,7 @@
   "dependencies": {
     "org.pcsoft.blending": "2.1.1",
     "org.pcsoft.editor-ex": "1.1.9",
-    "org.pcsoft.extension": "1.7.7",
+    "org.pcsoft.extension": "1.7.8",
     "org.pcsoft.common-ex": "1.1.7",
     "org.pcsoft.asset-loader": "1.1.0",
     "org.pcsoft.scene-base": "2.2.6",
