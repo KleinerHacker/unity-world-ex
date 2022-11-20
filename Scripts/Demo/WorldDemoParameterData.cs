@@ -9,7 +9,11 @@ namespace UnityWorldEx.Demo.scene_system.world_ex.Scripts.Demo
     [ParameterInitialDataType(typeof(WorldDemoInitialData))]
     public sealed class WorldDemoParameterData : ParameterData
     {
-        public string Text { get; set; }
+        public string Text
+        {
+            get => Get<string>("text");
+            set => Add("text", value);
+        }
 
         public override void InitializeData(ScriptableObject initData)
         {
