@@ -1,6 +1,7 @@
 using UnityEditor;
+using UnityEditorEx.Editor.editor_ex.Scripts.Editor.Utils;
 using UnityEngine;
-using UnitySceneBase.Editor.scene_system.scene_base.Scripts.Editor.Utils;
+using UnitySceneBase.Editor.scene_system.scene_base.Scripts.Editor;
 using UnityToolbarExtender;
 using UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Assets;
 
@@ -13,14 +14,14 @@ namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Provider
         private static readonly SerializedObject SerializedObject;
 
         private static readonly SerializedProperty UseSystemProperty;
-        
+
         static WorldSystemToolbar()
         {
             WorldSystemSettings = WorldSystemSettings.Singleton;
             SerializedObject = WorldSystemSettings.SerializedSingleton;
 
             UseSystemProperty = SerializedObject.FindProperty("useSystem");
-            
+
             ToolbarExtender.RightToolbarGUI.Add(OnToolbarGUI);
         }
 
@@ -29,12 +30,12 @@ namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Provider
             SerializedObject.Update();
 
             GUILayout.FlexibleSpace();
-            
+
             GUILayout.Space(5f);
 
             UseSystemProperty.boolValue = GUILayout.Toggle(UseSystemProperty.boolValue, "Use World System", ToolbarStyles.toggleStyle);
-            EditorGUILayoutEx.SceneVerbose(new GUIContent("World Logging"), ToolbarStyles.toggleStyle);
-            
+            ExtendedEditorGUILayout.SymbolField(new GUIContent("Editor World Loading"), UnitySceneBaseEditorConstants.Building.Symbol.EditorSceneLoading, ToolbarStyles.toggleStyle);
+
             SerializedObject.ApplyModifiedProperties();
         }
 
