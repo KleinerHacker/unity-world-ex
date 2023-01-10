@@ -40,6 +40,8 @@ namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Provider
             EditorGUILayout.HelpBox("World Extensions and Scene Extension are not compatible. Please remove one dependency from project!", MessageType.Error);
 #endif
 
+            ExtendedEditorGUILayout.SymbolFieldLeft("Activate Toolbar Integration", "WORLD_TOOLBAR_INTEGRATION");
+            EditorGUILayout.Space(25f);
             base.OnGUI(searchContext);
 
             EditorGUILayout.Space();
