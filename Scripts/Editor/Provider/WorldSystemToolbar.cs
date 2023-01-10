@@ -10,6 +10,7 @@ namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Provider
     [InitializeOnLoad]
     public static class WorldSystemToolbar
     {
+#if WORLD_TOOLBAR_INTEGRATION
         private static readonly WorldSystemSettings WorldSystemSettings;
         private static readonly SerializedObject SerializedObject;
 
@@ -57,5 +58,6 @@ namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Provider
                 };
             }
         }
+#endif
     }
 }
