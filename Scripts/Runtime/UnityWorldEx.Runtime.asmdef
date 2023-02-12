@@ -1,13 +1,15 @@
 {
     "name": "UnityWorldEx.Runtime",
     "rootNamespace": "UnityWorldEx.Runtime",
-    "references": ["GUID:86c5ae22b787083498226e9faa99731d",
-"GUID:463994087550c344abd34fb8d2fbd843",
-"GUID:626cca1954403c942aaa892ce194af26",
-"GUID:7e0e70507eb6bf44e9f9fd2a3026ac35",
-"GUID:03e750fc17f6cff499337d89b1e613c8",
-"GUID:e13cddd4b5df70e48add7fb8c6d723a8",
-"GUID:75469ad4d38634e559750d17036d5f7c"],
+    "references": [
+        "GUID:626cca1954403c942aaa892ce194af26",
+        "GUID:64c52e74a682df04189ccbd30b6ca5aa",
+        "GUID:86c5ae22b787083498226e9faa99731d",
+        "GUID:463994087550c344abd34fb8d2fbd843",
+        "GUID:03e750fc17f6cff499337d89b1e613c8",
+        "GUID:e13cddd4b5df70e48add7fb8c6d723a8",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
