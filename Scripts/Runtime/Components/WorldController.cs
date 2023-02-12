@@ -1,8 +1,8 @@
 using System;
 using System.Linq;
+using UnityBase.Runtime.@base.Scripts.Runtime.Components.Singleton.Attributes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityExtension.Runtime.extension.Scripts.Runtime.Components.Singleton.Attributes;
 using UnitySceneBase.Runtime.scene_system.scene_base.Scripts.Runtime.Assets;
 using UnitySceneBase.Runtime.scene_system.scene_base.Scripts.Runtime.Components;
 using UnitySceneBase.Runtime.scene_system.scene_base.Scripts.Runtime.Types;
