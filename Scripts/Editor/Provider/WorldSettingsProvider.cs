@@ -9,6 +9,7 @@ using UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Assets;
 
 namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Provider
 {
+    [SceneBaseInfo("PCSOFT_WORLD")]
     public sealed class WorldSettingsProvider : SceneSettingsProviderBase
     {
         #region Static Area
@@ -36,7 +37,9 @@ namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Provider
 
         public override void OnGUI(string searchContext)
         {
-#if SCENE_EX
+            GUILayout.Space(15f);
+
+#if PCSOFT_SCENE
             EditorGUILayout.HelpBox("World Extensions and Scene Extension are not compatible. Please remove one dependency from project!", MessageType.Error);
 #endif
 

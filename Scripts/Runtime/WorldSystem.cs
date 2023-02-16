@@ -1,3 +1,4 @@
+#if PCSOFT_WORLD
 using System;
 using UnitySceneBase.Runtime.scene_system.scene_base.Scripts.Runtime.Types;
 using UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Components;
@@ -25,3 +26,4 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime
             WorldController.Singleton.ExitApplication(showBlend, preExit);
     }
 }
+#endif

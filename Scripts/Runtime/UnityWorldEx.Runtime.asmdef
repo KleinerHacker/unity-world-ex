@@ -7,22 +7,16 @@
         "GUID:86c5ae22b787083498226e9faa99731d",
         "GUID:463994087550c344abd34fb8d2fbd843",
         "GUID:03e750fc17f6cff499337d89b1e613c8",
-        "GUID:e13cddd4b5df70e48add7fb8c6d723a8",
-        "GUID:75469ad4d38634e559750d17036d5f7c"
+      "GUID:e13cddd4b5df70e48add7fb8c6d723a8",
+      "GUID:75469ad4d38634e559750d17036d5f7c"
     ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [
-        {
-            "name": "Select...",
-            "expression": "",
-            "define": "WORLD_EX"
-        }
-    ],
-    "noEngineReferences": false
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }
