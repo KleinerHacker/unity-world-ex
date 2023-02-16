@@ -1,3 +1,4 @@
+#if PCSOFT_WORLD
 using System;
 using System.Linq;
 using UnityBase.Runtime.@base.Scripts.Runtime.Components.Singleton.Attributes;
@@ -13,9 +14,6 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Components
     public sealed class WorldController : SceneControllerBase<WorldController, WorldItem>
     {
         #region Static Area
-
-        [SingletonCondition]
-        public static bool IsSingletonAlive() => WorldSystemSettings.Singleton.UseSystem;
 
         [SingletonInitializer]
         public static void Initialize(WorldController instance)
@@ -115,3 +113,4 @@ namespace UnityWorldEx.Runtime.scene_system.world_ex.Scripts.Runtime.Components
         }
     }
 }
+#endif

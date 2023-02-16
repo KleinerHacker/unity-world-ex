@@ -14,14 +14,10 @@ namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Provider
         private static readonly WorldSystemSettings WorldSystemSettings;
         private static readonly SerializedObject SerializedObject;
 
-        private static readonly SerializedProperty UseSystemProperty;
-
         static WorldSystemToolbar()
         {
             WorldSystemSettings = WorldSystemSettings.Singleton;
             SerializedObject = WorldSystemSettings.SerializedSingleton;
-
-            UseSystemProperty = SerializedObject.FindProperty("useSystem");
 
             ToolbarExtender.RightToolbarGUI.Add(OnToolbarGUI);
         }
@@ -34,8 +30,8 @@ namespace UnityWorldEx.Editor.scene_system.world_ex.Scripts.Editor.Provider
 
             GUILayout.Space(5f);
 
-            UseSystemProperty.boolValue = GUILayout.Toggle(UseSystemProperty.boolValue, "Use World System", ToolbarStyles.toggleStyle);
-            ExtendedEditorGUILayout.SymbolField(new GUIContent("Editor World Loading"), UnitySceneBaseEditorConstants.Building.Symbol.EditorSceneLoading, ToolbarStyles.toggleStyle);
+            ExtendedEditorGUILayout.SymbolField(new GUIContent("Use World System"), "PCSOFT_WORLD", ToolbarStyles.toggleStyle);
+            ExtendedEditorGUILayout.SymbolField(new GUIContent("Editor World Loading"), "PCSOFT_SCENE_EDITOR_LOAD", ToolbarStyles.toggleStyle);
 
             SerializedObject.ApplyModifiedProperties();
         }
